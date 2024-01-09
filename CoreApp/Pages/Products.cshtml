@@ -1,0 +1,20 @@
+﻿@page "{handler?}"
+
+@model CoreApp.Pages.ProductsModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+ 
+@{
+    Layout = "_Layout";
+}
+
+<form asp-page-handler="edit" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="@Model.Message" />
+    <span asp-validation-for="Message" class="text-danger"></span>
+    <input type="submit" />
+</form>
+
+@Model.Message

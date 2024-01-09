@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModelV2>InProcess</AspNetCoreHostingModelV2>
+    <Configurations>Debug;Release;Staging</Configurations>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="OpenApiInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+  <!--<UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+  <Target Name="web_config_AfterBuild" AfterTargets="AfterBuild" Condition="Exists('web.$(Configuration).config')" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <TransformXml Source="web.config" Destination="$(OutputPath)web.config" Transform="web.$(Configuration).config" />
+  </Target>-->
+</Project>
